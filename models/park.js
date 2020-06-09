@@ -16,11 +16,9 @@ Park.prototype.removeDinosaur = function(dinosaur){
   this.collectionOfDinosaurs.splice(this.collectionOfDinosaurs.indexOf(dinosaur), 1)
 }
 
-Park.prototype.attractsMostVisitors = function(){
-  //this.addDinosaur('t-rex')
-  for dinosaur of this.collectionOfDinosaurs
-    return dinosaur.guestsAttractedPerDay.max()
-    }
+Park.prototype.attractsMostVisitors = function(dinosaur){
+  this.addDinosaur('t-rex')
+  const found = this.collectionOfDinosaurs.find(dinosaur.guestsAttractedPerDay.max)
 }
 
 
